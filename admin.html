@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>admin</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script>
+    function homepage()
+{
+    window.location.href="index.html";
+}
+
+function add_student(){
+    window.location.href="add_student.html";
+
+}
+
+function archive_student(){
+    window.location.href="archive_student.html";
+
+}
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1 class="n1">SSN College of Engineering</h1>	
+    </header>
+  <div class="center">
+    <button class="button2"  type ="submit" onclick="add_student()">ADD STUDENT</button>
+    <br><p></p>
+    <button class="button2" type ="submit" onclick="archive_student()">ARCHIVE STUDENT</button>
+    <p></p>
+    <button type="submit" onclick="homepage()">LogOut</button><br><br>
+    
+</div>
+  <script src="script.js"></script>
+
+
+<footer >
+	<img class="image1" src="https://www.ssn.edu.in/wp-content/uploads/2020/06/SSN-Institutions-1.png" alt="img" >
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+create database result;
+use result;
+create table student_login(studentid varchar(255), login varchar(255), password varchar(255));
+create table student_info(studentid varchar(255), name varchar(255), department varchar(255), year int(5),class varchar(255));
+create table classes(class varchar(255), teacher_sub1 varchar(255), teacher_sub2 varchar(255), teacher_sub3 varchar(255),teacher_sub4 varchar(255),teacher_sub5 varchar(255), teacher_sub6 varchar(255), classincharge varchar(255));
+create table teacher_info(teacherid varchar(255), login varchar(255), password varchar(255), department varchar(255));
+create table CSE2_marks(studentid varchar(255), semester1 decimal,semester2 decimal,semester3 decimal,CAT1_sub1 decimal,CAT1_sub2 decimal,CAT1_sub3 decimal,CAT1_sub4 decimal,CAT1_sub5 decimal,CAT1_sub6 decimal);
+create table department(Department varchar(255),HOD varchar(255), login varchar(255), password varchar(255));
+create table mentor(studentid varchar(255),mentor varchar(255), login varchar(255), password varchar(255));
+
+show tables;
+
+insert into student_login values("stu001","stu001@ssn.edu.in","stu@123");
+insert into student_login values("stu002","stu002@ssn.edu.in","stu@124");
+insert into student_login values("stu003","stu003@ssn.edu.in","stu@125");
+insert into student_login values("stu004","stu004@ssn.edu.in","stu@126");
+insert into student_login values("stu005","stu005@ssn.edu.in","stu@127");
+insert into student_login values("stu006","stu006@ssn.edu.in","stu@128");
+insert into student_login values("stu007","stu007@ssn.edu.in","stu@129");
+insert into student_login values("stu008","stu008@ssn.edu.in","stu@131");
+
+insert into teacher_info values("teach001","teach001@ssn.edu.in","teach@123","CSE");
+insert into teacher_info values("teach002","teach002@ssn.edu.in","teach@124","CSE");
+insert into teacher_info values("teach003","teach003@ssn.edu.in","teach@125","CSE");
+insert into teacher_info values("teach004","teach004@ssn.edu.in","teach@126","CSE");
+insert into teacher_info values("teach005","teach005@ssn.edu.in","teach@127","CSE");
+
+insert into student_info values("stu004","StudentNo01","CSE",2,"CSE2");
+insert into student_info values("stu001","StudentNo03","CSE",2,"CSE2");
+insert into student_info values("stu003","StudentNo35","CSE",2,"CSE2");
+insert into student_info values("stu002","StudentNo10","CSE",2,"CSE2");
+insert into student_info values("stu005","StudentNo07","CSE",2,"CSE2");
+insert into student_info values("stu006","StudentNo22","CSE",3,"CSE3");
+insert into student_info values("stu007","StudentNo11","CSE",3,"CSE3");
+insert into student_info values("stu008","StudentNo02","CSE",3,"CSE3");
+
+
+insert into classes values("CSE2","teach002","teach001","teach003","teach005","teach004","teach006","teach002");
+insert into classes values("CSE3","teach003","teach002","teach006","teach005","teach004","teach001","teach003");
+
+insert into CSE2_marks values("stu001",9.24,8.5,9.7,80,96,94,98,86,92);
+insert into CSE2_marks values("stu002",9.8,8.9,8.8,70,78,75,90,96,86);
+insert into CSE2_marks values("stu003",8.0,7.8,8.5,80,84,86,92,78,87);
+insert into CSE2_marks values("stu004",9.5,8.5,7.7,80,75,94,98,70,76);
+insert into CSE2_marks values("stu005",7.8,7.21,8.5,80,80,87,92,99,94);
+
+insert into mentor values("stu002","teach001","mentor_teach001@ssn.edu.in","1234");
+insert into mentor values("stu005","teach006","mentor_teach006@ssn.edu.in","2345");
+insert into mentor values("stu003","teach005","mentor_teach005@ssn.edu.in","3456");
+insert into mentor values("stu001","teach004","mentor_teach004@ssn.edu.in","4567");
+insert into mentor values("stu004","teach003","mentor_teach003@ssn.edu.in","5678");
+
+insert into department values("BME","teach008","BMEHOD@ssn.edu.in","BMEHOD");
+insert into department values("EEE","teach007","EEEHOD@ssn.edu.in","EEEHOD");
+insert into department values("ECE","teach001","ECEHOD@ssn.edu.in","ECEHOD");
+insert into department values("IT","teach002","ITHOD@ssn.edu.in","ITHOD");
+insert into department values("CSE","teach003","CSEHOD@ssn.edu.in","CSEHOD");
+
+create table parentemail(studentid varchar(255), parentemail varchar(255));
+insert into parentmail values("stu001","parent1@gmail.com");
+insert into parentemail values("stu002","parent2@gmail.com");
+insert into parentemail values("stu003","parent3@gmail.com");
+insert into parentemail values("stu004","parent4@gmail.com");
+insert into parentemail values("stu005","parent5@gmail.com");
+
+create table archive(studentid varchar(255),login varchar(255),password varchar(255), name varchar(255), department varchar(255), year int(5),class varchar(255));
+
+create table CSE3_marks(studentid varchar(255), semester1 decimal,semester2 decimal,semester3 decimal,CAT1_sub1 decimal,CAT1_sub2 decimal,CAT1_sub3 decimal,CAT1_sub4 decimal,CAT1_sub5 decimal,CAT1_sub6 decimal);
+insert into CSE3_marks values("stu006",9.8,8.9,8.8,70,78,75,90,96,86);
+insert into CSE3_marks values("stu007",8.0,7.8,8.5,80,84,86,92,78,87);
+insert into CSE3_marks values("stu008",9.5,8.5,7.7,80,75,94,98,70,76);
+
+create table arrear(studentid varchar(255),name varchar(255),subject varchar(255),semester int(5));
+insert into arrear values("stu005","StudentNo07","sub1",2);
+insert into arrear values("stu007","StudentNo11","sub6",3);
+select * from arrear;
